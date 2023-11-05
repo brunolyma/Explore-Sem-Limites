@@ -102,8 +102,10 @@ form label {
 form input,
 textarea {
   border: none;
+  outline: none;
   background-color: #f9f4fb;
   color: #312d64;
+  
 }
 form input::placeholder,
 textarea::placeholder {

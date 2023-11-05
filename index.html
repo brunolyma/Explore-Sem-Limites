@@ -70,15 +70,16 @@
                 <h2>Entre em contato</h2>
                 <label for="name">
                     <ion-icon name="person"></ion-icon>
-                    <input type="text" name="name" placeholder="Seu nome" id="name">
+                    <input type="text" name="name" placeholder="Seu nome" id="name" required>
                 </label>
                 <label for="email">
                     <ion-icon name="at"></ion-icon>
-                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="email" name="email" id="email" placeholder="Email"
+                        pattern="[/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/]" required>
                 </label>
                 <label for="coments">
-                    <textarea name="coments" id="coments" cols="40" rows="10"
-                        placeholder="Digite sua mensagem aqui..."></textarea>
+                    <textarea name="coments" id="coments" cols="40" rows="10" placeholder="Digite sua mensagem aqui..."
+                        required></textarea>
                 </label>
                 <button type="submit">Enviar Mensagem</button>
             </form>
