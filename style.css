@@ -11,6 +11,9 @@ body {
   font-family: "Mulish", sans-serif;
   background: #f9f4fb;
 }
+section, footer {
+  min-width: 365px;
+}
 
 h1,
 h2,
@@ -24,18 +27,24 @@ header {
 }
 header img {
   display: block;
-  width: 364px;
+  width: 365px;
   height: 370px;
   margin: 0 auto 16px;
 }
 
 header div {
   text-align: center;
+  min-width: 365px;
 }
 
 header p {
   font-size: 20px;
   margin-bottom: 52px;
+}
+
+header a:hover {
+  animation: bounce infinite;
+  animation-duration: 2s;
 }
 
 /* ** CARDBOARD ** */
@@ -105,7 +114,6 @@ textarea {
   outline: none;
   background-color: #f9f4fb;
   color: #312d64;
-  
 }
 form input::placeholder,
 textarea::placeholder {
@@ -127,6 +135,10 @@ button {
   font-weight: 700;
 }
 
+div.background {
+  display: none;
+}
+
 /* ** FOOTER ** */
 
 footer {
@@ -135,4 +147,104 @@ footer {
   background-color: #343193;
   color: #fff;
   text-align: center;
+}
+
+/* ** MEDIA QUERIES ** */
+
+@media (min-width: 700px) {
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+    justify-content: space-around;
+    padding-inline: 60px 32px;
+  }
+
+  header img {
+    width: 750px;
+    height: 85%;
+    margin: 0;
+  }
+  header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header h1 {
+    font-size: 60px;
+  }
+  header p {
+    font-size: 32px;
+  }
+
+  /* ** CARDBOARD ** */
+
+  #cardboard {
+    flex-direction: row;
+    padding: 64px 112px;
+    gap: 60px;
+  }
+
+  .content h3 {
+    font-size: 36px;
+  }
+
+  .content p {
+    font-size: 20px;
+  }
+
+  /* ** FORM ** */
+
+  #contact {
+    display: flex;
+    gap: 92px;
+    flex-grow: 1;
+  }
+
+  form {
+    width: 100%;
+    padding-left: 100px;
+  }
+
+  form h2 {
+    font-size: 42px;
+  }
+
+  form textarea {
+    width: 100%;
+  }
+
+  button {
+    margin-bottom: 64px;
+  }
+
+  div.background {
+    display: block;
+    width: 100%;
+  }
+
+  div.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: 50px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
 }
